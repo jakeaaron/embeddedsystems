@@ -1,5 +1,5 @@
 /**
- * @file [gpio_extra.c]
+ * @file [switch_led.c]
  * @brief [This file turns an led on if the switch is pressed, it turns the led off if the switch is released.]
  * @author [Jacob Allenwood]
  * @date [September 30, 2015]
