@@ -1,0 +1,36 @@
+ECE 471 Fall 2015 -- Homework 4
+
+Name: Jacob Allenwood
+
+
+What you did for something cool (if applicable):
+I turned the led on (wrote high to the gpio4 value file) when the switch was pressed (10 consecutive high reads from the gpio17 value file), and turned the led off (wrote low to the gpio4 value file) when the switch was released (10 consecutive low reads from the gpio17 value file).
+
+Answers to Question #5:
+
+a.
+udelay() is better to use than a busy loop because a busy loop just wastes resources doing nothing at all, and udelay() is easier to delay for a specific amount of time. The compiler may also optimize the busy loop away because it sees that it doesn't do anything. 
+
+b.
+the operating system allows the user to just write to files to communicate with the gpio, rather than having to know how to communicate directly with the hardware. It's a much easier, more accessible, and safer way of dealing with the hardware, having the abstraction of the os. 
+
+c.
+writing to control the hardware from the abstraction layer of the os can lead to some difficulties when trying to do things that the operating system doesn't allow. Most of the reason for the os restricting the user from doing things is for safety, but if the user actually knows what theyre doing, the os can make it very difficult. 
+
+d.
+I would consider the web browser to be a part of the operating system; it is included with the os, it can't be deleted, everybody expects it to be there with no install requirement or anything else, and it interacts with hardware to connect to the internet, display information, and accept user input. 
+
+Answers to Question #6:
+
+a. Machine type:
+Machine model: Raspberry Pi 2 Model B
+
+b. Kernel version:
+Linux raspberrypi 3.18.7-v7+ #755 SMP PREEMPT Thu Feb 12 17:20:48 GMT 2015 armv7l GNU/Linux
+
+c. Free Disk space:
+Filesystem      Size  Used Avail Use% Mounted on
+rootfs          6.3G  2.5G  3.6G  41% /
+
+d.
+df gives the disk usage and the -h flag displays the usage in "human-readable" format
